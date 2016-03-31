@@ -175,8 +175,7 @@ function MicroWorld:create_workbench(citizen, x, z)
       error('workbench has no stonehearth:workshop component!', 2)
    end
    
-   crafter_component:set_workshop(workshop_component)
-   workshop_component:set_crafter(citizen)
+   workshop_component:restore()
    
    return workbench
 end
